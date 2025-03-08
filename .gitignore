@@ -1,3 +1,78 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+
+# Maven
+*target/
+
+# Gradle
+*.gradle/
+*build/
+
+# Spring Boot
+*.jar.original
+
+# Logs
+*logs/
+*.log
+
+# VS Code
+*.vscode/
+
+# Eclipse
+*.project
+*.classpath
+*.settings/
+*.factorypath
+
+# IntelliJ
+*.idea/
+*.iml
+*.idea/
+*out/
+
+# NetBeans
+*nbproject/
+*build/
+*nbbuild/
+*dist/
+*nbdist/
+
+# STS (Spring Tool Suite)
+*.springBeans
+
+# VS Code
+*.vscode/
+
+# MacOS
+*.DS_Store
+
+# Windows
+*Thumbs.db
+*desktop.ini
+
+# Linux
+*~
+
+# Logs and databases
+*.log
+*.sqlitedb
+*.sqlite
+*.h2.db
+*.mv.db
+
+# Environment Files
+*.env
+
+# Eclipse specific
+.project
+.metadata
+.settings/
+*bin/
 # Compiled class file
 *.class
 
@@ -8,7 +83,7 @@
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
-.mtj.tmp/
+*.mtj.tmp/
 
 # Package Files #
 *.jar
@@ -20,5 +95,5 @@
 *.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+*hs_err_pid*
+*replay_pid*
