@@ -4,7 +4,7 @@ public class RedHeadDuck extends Duck {
 
     @Override
     public void display() {
-        log.warning("Look like a RedHead");
+        log.warning("Looks like a RedHead");
     }
 
 }

@@ -22,6 +22,14 @@ public abstract class Duck {
     }
 
     /**
+     * La manera incorrecta de implementar una nueva
+     *  funcionalidad a la clase Duck
+     */
+    public void fly() {
+
+    }
+
+    /**
      * Each duck subtype
      * is responsible for
      * implementing its own

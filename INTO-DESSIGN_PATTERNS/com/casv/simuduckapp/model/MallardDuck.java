@@ -4,7 +4,7 @@ public class MallardDuck extends Duck {
 
     @Override
     public void display() {
-        log.warning("Look like a Mallard");
+        log.warning("Looks like a Mallard");
     }
 
 }
