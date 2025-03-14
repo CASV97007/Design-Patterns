@@ -1,6 +1,6 @@
 package com.casv.simuduckapp.model;
 
-public class DecoyDuck extends Duck {
+public class DecoyDuck extends Duck implements Flyable, Quackable {
 
     @Override
     public void display() {

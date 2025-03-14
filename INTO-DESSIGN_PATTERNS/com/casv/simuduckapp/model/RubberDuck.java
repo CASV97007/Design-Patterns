@@ -13,8 +13,4 @@ public class RubberDuck extends Duck {
      * nuevas clases que hereden de Duck
      */
 
-    @Override
-    public void fly() {
-        // no hacer nada
-    }
 }
