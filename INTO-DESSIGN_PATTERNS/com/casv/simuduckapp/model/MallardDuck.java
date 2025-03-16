@@ -1,6 +1,9 @@
 package com.casv.simuduckapp.model;
 
-public class MallardDuck extends Duck implements Flyable, Quackable {
+import com.casv.simuduckapp.model.duckBehaviors.fly.FlyBehavior;
+import com.casv.simuduckapp.model.duckBehaviors.quack.QuackBehavior;
+
+public class MallardDuck extends Duck implements FlyBehavior, QuackBehavior {
 
     @Override
     public void display() {
