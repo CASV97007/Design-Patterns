@@ -1,19 +1,27 @@
 package com.casv.simuduckapp.model;
 
-import java.util.logging.Logger;
+import com.casv.simuduckapp.model.duckBehaviors.fly.FlyBehavior;
+import com.casv.simuduckapp.model.duckBehaviors.quack.QuackBehavior;
 
 /**
- * Separating what changes from what stays the same
- * The Duck class is still the superclass of all ducks, but we are pulling out
- * the fly and quack behaviors and putting them into another classs tructure.
- * * @author
+ * Duck.java
+ * <p>
+ * This class represents a duck with behaviors.
+ * </p>
+ * 
+ * @author CASV97 en 16 Mar 2025
  */
 public abstract class Duck {
-    Logger log = Logger.getLogger(getClass().getName());
-    //Pull out what varies
-    public void swim() {
-        log.warning("swimming");
 
+    /**
+     * The behavior variables are declared as the behavior INTERFACE type. Instance
+     * variables hold a reference to a specific behavior at runtime.
+     */
+    FlyBehavior flyBehavior;
+    QuackBehavior quackBehavior;
+
+    public Duck() {
+        super();
     }
 
     /**
@@ -21,5 +29,18 @@ public abstract class Duck {
      * for how it
      */
     public abstract void display();
-    // OTHER duck-like methods...
+
+    public void swim() {
+        System.out.println("All ducks float, even decoys!");
+
+    }
+
+    // These methods replace fly () and quack().
+    public void performFly() {
+        flyBehavior.fly();
+    }
+
+    public void performQuack() {
+        quackBehavior.quack();
+    }
 }

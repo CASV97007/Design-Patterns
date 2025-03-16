@@ -1,22 +1,16 @@
 package com.casv.simuduckapp.model;
 
-import com.casv.simuduckapp.model.duckBehaviors.fly.FlyBehavior;
-import com.casv.simuduckapp.model.duckBehaviors.quack.QuackBehavior;
+import com.casv.simuduckapp.model.duckBehaviors.fly.impl.FlyNoWay;
+import com.casv.simuduckapp.model.duckBehaviors.quack.impl.MuteQuack;
 
-public class DecoyDuck extends Duck implements FlyBehavior, QuackBehavior {
-
+public class DecoyDuck extends Duck  {
+public DecoyDuck() {
+    flyBehavior = new FlyNoWay();
+    quackBehavior = new MuteQuack();
+}
     @Override
     public void display() {
-        log.warning("Looks like wooden decoy duck");
+        System.out.println("Looks like a DecoyDuck");
     }
 
-    @Override
-    public void fly() {
-        // No hace nada
-    }
-
-    @Override
-    public void quack() {
-        // NO hace nada
-    }
 }

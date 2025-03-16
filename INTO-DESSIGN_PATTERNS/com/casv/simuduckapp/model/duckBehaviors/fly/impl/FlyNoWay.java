@@ -6,12 +6,13 @@
 
 package com.casv.simuduckapp.model.duckBehaviors.fly.impl;
 
-public class FlyNoWay {
+import com.casv.simuduckapp.model.duckBehaviors.fly.FlyBehavior;
 
-    // Constructor principal (opcional)
-    public FlyNoWay() {
-        // TODO: Inicializar atributos
+public class FlyNoWay implements FlyBehavior{
+
+    @Override
+    public void fly() {
+        System.out.println("I can't fly");
     }
 
-    // TODO: Añade métodos, atributos y lógica
 }

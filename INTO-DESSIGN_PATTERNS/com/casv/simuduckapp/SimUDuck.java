@@ -1,7 +1,10 @@
 package com.casv.simuduckapp;
 
+import com.casv.simuduckapp.model.DecoyDuck;
+import com.casv.simuduckapp.model.Duck;
 import com.casv.simuduckapp.model.MallardDuck;
 import com.casv.simuduckapp.model.RedHeadDuck;
+import com.casv.simuduckapp.model.RubberDuck;
 
 /**
  * The game can show a large variety of
@@ -14,15 +17,22 @@ import com.casv.simuduckapp.model.RedHeadDuck;
 public class SimUDuck {
 
     public static void main(String[] args) {
-        MallardDuck duck = new MallardDuck();
-        duck.quack();
-        duck.swim();
-        duck.display();
-        RedHeadDuck duck2 = new RedHeadDuck();
-        duck2.quack();
-        duck2.swim();
-        duck2.display();
-
+        Duck mallard = new MallardDuck();
+        mallard.display();
+        mallard.performFly();
+        mallard.performQuack();
+        Duck redheaDuck = new RedHeadDuck();
+        redheaDuck.display();
+        redheaDuck.performFly();
+        redheaDuck.performQuack();
+        Duck decoyDuck = new DecoyDuck();
+        decoyDuck.display();
+        decoyDuck.performFly();
+        decoyDuck.performQuack();
+        Duck rubberDuck = new RubberDuck();
+        rubberDuck.display();
+        rubberDuck.performFly();
+        rubberDuck.performQuack();
     }
 
 }
