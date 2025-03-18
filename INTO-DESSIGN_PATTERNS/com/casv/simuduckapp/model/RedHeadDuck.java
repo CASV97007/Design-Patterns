@@ -1,7 +1,7 @@
 package com.casv.simuduckapp.model;
 
-import com.casv.simuduckapp.model.duckBehaviors.fly.impl.FlyWithWings;
-import com.casv.simuduckapp.model.duckBehaviors.quack.impl.Quack;
+import com.casv.simuduckapp.model.duck_behaviors.fly.impl.FlyWithWings;
+import com.casv.simuduckapp.model.duck_behaviors.quack.impl.Quack;
 
 public class RedHeadDuck extends Duck {
     public RedHeadDuck() {

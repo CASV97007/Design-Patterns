@@ -1,6 +1,6 @@
-package com.casv.simuduckapp.model.duckBehaviors.quack.impl;
+package com.casv.simuduckapp.model.duck_behaviors.quack.impl;
 
-import com.casv.simuduckapp.model.duckBehaviors.quack.QuackBehavior;
+import com.casv.simuduckapp.model.duck_behaviors.quack.QuackBehavior;
 
 /**
  * Quack.java

@@ -5,4 +5,4 @@
  * Also variuous behaviors implementations are going to live here
  * “Program to an interface” really means * “Program to a supertype.”
  */
-package com.casv.simuduckapp.model.duckBehaviors;
+package com.casv.simuduckapp.model.duck_behaviors;

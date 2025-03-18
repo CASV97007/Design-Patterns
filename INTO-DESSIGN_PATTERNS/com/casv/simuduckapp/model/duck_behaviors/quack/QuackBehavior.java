@@ -5,7 +5,7 @@
  * Implementing classes should provide their own version of the quack method
  * to define how the duck will quack.
  */
-package com.casv.simuduckapp.model.duckBehaviors.quack;
+package com.casv.simuduckapp.model.duck_behaviors.quack;
 
 /**
  * Same thing here for the quack behavior; we have an interface that just

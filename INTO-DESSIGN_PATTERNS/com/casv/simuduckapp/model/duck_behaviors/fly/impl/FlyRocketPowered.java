@@ -1,6 +1,6 @@
-package com.casv.simuduckapp.model.duckBehaviors.fly.impl;
+package com.casv.simuduckapp.model.duck_behaviors.fly.impl;
 
-import com.casv.simuduckapp.model.duckBehaviors.fly.FlyBehavior;
+import com.casv.simuduckapp.model.duck_behaviors.fly.FlyBehavior;
 
 /**
  * FlyRocketPowered is a class that implements the FlyBehavior interface.

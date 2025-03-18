@@ -1,7 +1,7 @@
 package com.casv.simuduckapp.model;
 
-import com.casv.simuduckapp.model.duckBehaviors.fly.FlyBehavior;
-import com.casv.simuduckapp.model.duckBehaviors.quack.QuackBehavior;
+import com.casv.simuduckapp.model.duck_behaviors.fly.FlyBehavior;
+import com.casv.simuduckapp.model.duck_behaviors.quack.QuackBehavior;
 
 /**
  * Duck.java
@@ -42,5 +42,15 @@ public abstract class Duck {
 
     public void performQuack() {
         quackBehavior.quack();
+    }
+
+    // Setting behavior dynamically We can call these methods anytime we want to
+    // change the behavior of a duck on the ﬂy.
+    public void setFlyBehavior(FlyBehavior fb) {
+        this.flyBehavior = fb;
+    }
+
+    public void setQuackBehavior(QuackBehavior qb) {
+        this.quackBehavior = qb;
     }
 }
