@@ -20,10 +20,6 @@ public abstract class Duck {
     FlyBehavior flyBehavior;
     QuackBehavior quackBehavior;
 
-    public Duck() {
-        super();
-    }
-
     /**
      * Each duck subtype is responsible for implementing its own display() behavior
      * for how it
