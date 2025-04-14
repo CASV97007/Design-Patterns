@@ -33,8 +33,7 @@ A grandes rasgos, el patrón provee un mecanismo para que diversas partes de tu 
 interface Observer {
     void update(State newState);
 }
-
-        ```
+```
 
 ---
 
