@@ -1,0 +1,57 @@
+@startuml WeatherData
+' Muestra las clases de izquierda a derecha
+left to right direction
+skinparam classAttributeIconSize 0
+
+'===== Interfaces =====
+interface Subject {
+    +registerObserver(o)
+    +removeObserver(o)
+    +notifyObservers()
+}
+
+interface Observer {
+    +update(temp, hum, pres)
+}
+
+interface DisplayElement {
+    +display()
+}
+
+'===== Clases =====
+class WeatherData {
+    -List<Observer> observers
+    -float temperature
+    -float humidity
+    -float pressure
+    +setMeasurements(t, h, p)
+}
+
+class CurrentConditionsDisplay {
+    +update(...)
+    +display()
+}
+
+class StatisticsDisplay {
+    +update(...)
+    +display()
+}
+
+class ForecastDisplay {
+    +update(...)
+    +display()
+}
+
+'===== Relaciones =====
+WeatherData ..|> Subject
+WeatherData "1" o-- "*" Observer : notifies
+
+CurrentConditionsDisplay ..|> Observer
+CurrentConditionsDisplay ..|> DisplayElement
+
+StatisticsDisplay ..|> Observer
+StatisticsDisplay ..|> DisplayElement
+
+ForecastDisplay ..|> Observer
+ForecastDisplay ..|> DisplayElement
+@enduml

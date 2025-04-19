@@ -1,8 +1,9 @@
 package com.casv.observer.weather_data;
 
-import com.casv.observer.weather_data.service.display.CurrentConditionsDisplay;
-import com.casv.observer.weather_data.service.display.ForecastDisplay;
-import com.casv.observer.weather_data.service.display.StatisticsDisplay;
+import java.util.ArrayList;
+
+import com.casv.observer.weather_data.service.Observer;
+import com.casv.observer.weather_data.service.Subject;
 
 /**
  * These three methods return the most
@@ -12,40 +13,21 @@ import com.casv.observer.weather_data.service.display.StatisticsDisplay;
  * WeatherData object knows how to get updated
  * info from the Weather Station.
  */
-public class WeatherData {
+public class WeatherData implements Subject {
+    private ArrayList<Observer> observers;
     private float temperature;
     private float humidity;
     private float pressure;
 
-    private CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay();
-    private StatisticsDisplay statisticsDisplay = new StatisticsDisplay();
-    private ForecastDisplay forecastDisplay = new ForecastDisplay();
-
     /**
-     * @return the temperature
+     * 
      */
-    public float getTemperature() {
-        return this.temperature;
-    }
-
-    /**
-     * @return the humidity
-     */
-    public float getHumidity() {
-        return this.humidity;
-    }
-
-    /**
-     * @return the pressure
-     */
-    public float getPressure() {
-        return this.pressure;
+    public WeatherData() {
+        this.observers = new ArrayList<>();
     }
 
     public void measurementsChanged() {
-        this.currentConditionsDisplay.update(this.getTemperature(), this.getHumidity(), this.getPressure());
-        this.statisticsDisplay.update(this.getTemperature(), this.getHumidity(), this.getPressure());
-        this.forecastDisplay.update(this.getTemperature(), this.getHumidity(), this.getPressure());
+        this.notifyObservers();
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {
@@ -53,6 +35,27 @@ public class WeatherData {
         this.humidity = humidity;
         this.pressure = pressure;
         this.measurementsChanged();
+    }
+
+    @Override
+    public void registerObserver(Observer o) {
+        this.observers.add(o);
+    }
+
+    @Override
+    public void removeObserver(Observer o) {
+
+        int i = this.observers.indexOf(o);
+        if (i >= 0) {
+            this.observers.remove(i);
+        }
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : this.observers) {
+            observer.update(this.temperature, this.humidity, this.pressure);
+        }
     }
 
 }
